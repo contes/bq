@@ -74,7 +74,7 @@
   }
   
 catch (err) {
-    Logger.log(err);
+    //Logger.log(err);
     Browser.msgBox(err);
     return;
   }
@@ -85,7 +85,7 @@ catch (err) {
       queryResults = BigQuery.Jobs.getQueryResults(projectNumber, queryJob.getJobReference().getJobId());
     }
     catch (err) {
-      Logger.log(err);
+      //Logger.log(err);
       Browser.msgBox(err);
       return;
     }
