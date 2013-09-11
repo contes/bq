@@ -60,6 +60,7 @@
         });
       }
     </script>
+    <script>
     function runQuery() {
   // Replace this value with your Google Developer project number
   var projectNumber = '12320125313';
@@ -111,6 +112,7 @@
   // Update the Spreadsheet with data from the resultValues array, starting from cell A1
   sheet.getRange(1, 1, resultCount, tableRows[0].getF().length).setValues(resultValues);  
 }
+</script>
   </head>
 
   <body>
