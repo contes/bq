@@ -70,7 +70,7 @@
 
   // Inserts a Query Job
   try {
-    queryResults = BigQuery.Jobs.query(projectNumber, sql);
+    queryResults = gapi.client.bigquery.Jobs.query(projectNumber, sql);
   }
   
 catch (err) {
@@ -82,7 +82,7 @@ catch (err) {
   // Check on status of the Query Job
   while (queryResults.getJobComplete() == false) {
     try {
-      queryResults = BigQuery.Jobs.getQueryResults(projectNumber, queryJob.getJobReference().getJobId());
+      queryResults = gapi.client.bigquery.Jobs.getQueryResults(projectNumber, queryJob.getJobReference().getJobId());
     }
     catch (err) {
       //Logger.log(err);
